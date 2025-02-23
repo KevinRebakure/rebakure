@@ -1,5 +1,7 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Container } from "@mui/material";
+import NavBar from "./components/layout/NavBar";
 
 const darkTheme = createTheme({
   palette: {
@@ -11,7 +13,9 @@ export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <main>This app is using the dark mode</main>
+      <Container>
+        <NavBar />
+      </Container>
     </ThemeProvider>
   );
 }
