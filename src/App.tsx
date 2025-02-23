@@ -11,6 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import HeroSection from "./components/layout/HeroSection";
 import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 
 const darkTheme = createTheme({
   palette: {
@@ -88,6 +89,8 @@ export default function App() {
               ))}
             </List>
           </Box>
+
+          <Footer />
         </Stack>
       </Container>
     </ThemeProvider>
