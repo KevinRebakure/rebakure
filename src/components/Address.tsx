@@ -4,7 +4,7 @@ import ProfileLink from "./shared/ProfileLink";
 
 function Address() {
   return (
-    <Stack spacing={2} sx={{ border: "1px solid white" }}>
+    <Stack spacing={2}>
       <Typography variant="h6" component="h2">
         Let's connect...
       </Typography>

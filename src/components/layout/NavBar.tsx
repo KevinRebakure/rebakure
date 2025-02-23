@@ -18,7 +18,6 @@ function NavBar() {
 }
 
 const navBarStyles = {
-  border: "1px solid white",
   padding: 2,
   alignItems: "center",
   justifyContent: "center",

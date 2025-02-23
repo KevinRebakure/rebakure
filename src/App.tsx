@@ -1,8 +1,8 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import HeroSection from "./components/layout/HeroSection";
 import NavBar from "./components/layout/NavBar";
-import Address from "./components/Address";
 
 const darkTheme = createTheme({
   palette: {
@@ -16,7 +16,7 @@ export default function App() {
       <CssBaseline />
       <Container>
         <NavBar />
-        <Address />
+        <HeroSection />
       </Container>
     </ThemeProvider>
   );
