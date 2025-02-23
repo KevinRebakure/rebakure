@@ -1,16 +1,18 @@
+import {
+  AccountCircleRounded,
+  FolderRounded,
+  RocketLaunchRounded,
+  TipsAndUpdatesRounded,
+} from "@mui/icons-material";
 import { Stack } from "@mui/material";
-import Bulb from "../../assets/icons/Bulb";
-import FolderIcon from "../../assets/icons/FolderIcon";
-import RocketIcon from "../../assets/icons/RocketIcon";
-import UserIcon from "../../assets/icons/UserIcon";
 
 function NavBar() {
   return (
     <Stack direction="row" spacing={4} sx={navBarStyles}>
-      <UserIcon />
-      <FolderIcon />
-      <Bulb />
-      <RocketIcon />
+      <AccountCircleRounded color="primary" />
+      <FolderRounded color="primary" />
+      <TipsAndUpdatesRounded color="primary" />
+      <RocketLaunchRounded color="primary" />
     </Stack>
   );
 }
