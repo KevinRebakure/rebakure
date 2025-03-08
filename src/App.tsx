@@ -1,10 +1,7 @@
-import {
-  BulbOutlined,
-  FolderOutlined,
-  TagOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { BulbOutlined, TagOutlined } from "@ant-design/icons";
 import { Flex, Layout } from "antd";
+import BulbIcon from "./assets/icons/BulbIcon";
+import UserIcon from "./assets/icons/UserIcon";
 
 const { Content, Footer, Header } = Layout;
 
@@ -18,8 +15,8 @@ export default function App() {
           align="center"
           style={{ border: "1px solid white", height: "100%" }}
         >
-          <UserOutlined style={iconStyles} />
-          <FolderOutlined style={iconStyles} />
+          <UserIcon style={iconStyles} />
+          <BulbIcon style={iconStyles} />
           <BulbOutlined style={iconStyles} />
           <TagOutlined style={iconStyles} />
         </Flex>
@@ -32,5 +29,5 @@ export default function App() {
 
 const iconStyles: React.CSSProperties = {
   color: "white",
-  fontSize: 28,
+  fontSize: 32,
 };
