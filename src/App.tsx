@@ -1,26 +1,29 @@
-import { Flex, Layout } from "antd";
-import BulbIcon from "./assets/icons/BulbIcon";
-import FolderIcon from "./assets/icons/FolderIcon";
-import RocketIcon from "./assets/icons/RocketIcon";
-import UserIcon from "./assets/icons/UserIcon";
+import { ConfigProvider, Flex, Layout, theme, Typography } from "antd";
 import React from "react";
+import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 
 const { Content, Footer, Header } = Layout;
+const { Title } = Typography;
 
 export default function App() {
   return (
-    <Layout>
-      <Header>
-        <Flex gap={50} justify="center" align="center" style={iconsGroup}>
-          <UserIcon style={iconStyles} />
-          <BulbIcon style={iconStyles} />
-          <FolderIcon style={iconStyles} />
-          <RocketIcon style={iconStyles} />
-        </Flex>
-      </Header>
-      <Content>Content</Content>
-      <Footer>Footer</Footer>
-    </Layout>
+    <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+      <Layout>
+        <Header>
+          <Flex gap={50} justify="center" align="center" style={iconsGroup}>
+            <UserIcon style={iconStyles} />
+            <FolderIcon style={iconStyles} />
+            <BulbIcon style={iconStyles} />
+            <RocketIcon style={iconStyles} />
+          </Flex>
+        </Header>
+
+        <Content>
+          <Title>Kevin Rebakure</Title>
+        </Content>
+        <Footer>Footer</Footer>
+      </Layout>
+    </ConfigProvider>
   );
 }
 
