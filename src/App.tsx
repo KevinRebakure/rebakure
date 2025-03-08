@@ -1,7 +1,7 @@
-import { TagOutlined } from "@ant-design/icons";
 import { Flex, Layout } from "antd";
 import BulbIcon from "./assets/icons/BulbIcon";
 import FolderIcon from "./assets/icons/FolderIcon";
+import RocketIcon from "./assets/icons/RocketIcon";
 import UserIcon from "./assets/icons/UserIcon";
 
 const { Content, Footer, Header } = Layout;
@@ -19,7 +19,7 @@ export default function App() {
           <UserIcon style={iconStyles} />
           <BulbIcon style={iconStyles} />
           <FolderIcon style={iconStyles} />
-          <TagOutlined style={iconStyles} />
+          <RocketIcon style={iconStyles} />
         </Flex>
       </Header>
       <Content>Content</Content>
