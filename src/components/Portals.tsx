@@ -30,7 +30,9 @@ const portals = [
   {
     username: "Kevin Rebakure",
     platform: "LinkedIn",
-    icon: <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 32 }} />,
+    icon: (
+      <FontAwesomeIcon icon={faLinkedin} style={{ width: 32, height: 32 }} />
+    ),
   },
   {
     username: "kevinrebakuree",
