@@ -2,6 +2,7 @@ import { ConfigProvider, Flex, Layout, theme, Typography } from "antd";
 import React from "react";
 import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
+import Portals from "./components/Portals";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
@@ -20,7 +21,10 @@ export default function App() {
         </Header>
 
         <Content>
-          <Title>Kevin Rebakure</Title>
+          <Flex style={{ border: "1px solid white" }} vertical>
+            <Title>Kevin Rebakure</Title>
+            <Portals />
+          </Flex>
         </Content>
         <Footer>Footer</Footer>
       </Layout>
