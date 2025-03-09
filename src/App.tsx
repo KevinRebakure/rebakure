@@ -44,7 +44,7 @@ export default function App() {
                 textAlign: "center",
                 paddingTop: 200,
                 paddingBottom: 200,
-                fontSize: 80,
+                fontSize: 60,
                 fontWeight: "lighter",
               }}
             >
