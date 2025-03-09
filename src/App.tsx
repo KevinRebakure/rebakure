@@ -11,7 +11,13 @@ export default function App() {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Layout style={{ minHeight: "100vh" }}>
-        <Header>
+        <Header
+          style={{
+            position: "sticky",
+            top: 0,
+            zIndex: 1,
+          }}
+        >
           <Flex gap={50} justify="center" align="center" style={iconsGroup}>
             <UserIcon style={iconStyles} />
             <FolderIcon style={iconStyles} />
@@ -21,9 +27,29 @@ export default function App() {
         </Header>
 
         <Content>
-          <Flex style={{ border: "1px solid white" }} vertical>
-            <Title>Kevin Rebakure</Title>
+          <Flex vertical gap={100}>
+            <Title
+              style={{
+                textAlign: "center",
+                paddingTop: 300,
+                paddingBottom: 300,
+                fontWeight: "lighter",
+              }}
+            >
+              Kevin Rebakure
+            </Title>
             <Portals />
+            <Title
+              style={{
+                textAlign: "center",
+                paddingTop: 200,
+                paddingBottom: 200,
+                fontSize: 80,
+                fontWeight: "lighter",
+              }}
+            >
+              Let's Learn and Build Stuff Together
+            </Title>
           </Flex>
         </Content>
         <Footer>Footer</Footer>

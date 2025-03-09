@@ -1,13 +1,18 @@
-import { Card, Flex, Typography } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { GitHubIcon, XIcon, InstagramIcon, GmailIcon } from "../assets/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card, Flex, Typography } from "antd";
+import { GitHubIcon, GmailIcon, InstagramIcon, XIcon } from "../assets/icons";
 
 const { Text, Title } = Typography;
 
 function Portals() {
   return (
-    <Card style={{ width: "80%", margin: "0 auto" }}>
+    <Card
+      style={{
+        width: "70%",
+        margin: "0 auto",
+      }}
+    >
       <Title level={3} style={{ marginBottom: 30 }}>
         Let's connect...
       </Title>
