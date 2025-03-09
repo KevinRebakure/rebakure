@@ -1,10 +1,7 @@
 import { Card, Flex, Typography } from "antd";
-import GitHubIcon from "../assets/icons/GitHubIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import XIcon from "../assets/icons/XIcon";
-import InstagramIcon from "../assets/icons/InstagramIcon";
-import GmailIcon from "../assets/icons/GmailIcon";
+import { GitHubIcon, XIcon, InstagramIcon, GmailIcon } from "../assets/icons";
 
 const { Text } = Typography;
 
