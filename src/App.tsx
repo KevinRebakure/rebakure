@@ -1,5 +1,6 @@
 import { ConfigProvider, Flex, Layout, theme, Typography } from "antd";
 import React from "react";
+import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 
 const { Content, Footer, Header } = Layout;
@@ -8,7 +9,7 @@ const { Title } = Typography;
 export default function App() {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
-      <Layout>
+      <Layout style={{ minHeight: "100vh" }}>
         <Header>
           <Flex gap={50} justify="center" align="center" style={iconsGroup}>
             <UserIcon style={iconStyles} />
