@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 import Portals from "./components/Portals";
+import SkillSet from "./components/SkillSet";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
@@ -38,7 +39,9 @@ export default function App() {
             >
               Kevin Rebakure
             </Title>
+
             <Portals />
+
             <Title
               style={{
                 textAlign: "center",
@@ -50,8 +53,11 @@ export default function App() {
             >
               Let's Learn and Build Stuff Together
             </Title>
+
+            <SkillSet />
           </Flex>
         </Content>
+
         <Footer>Footer</Footer>
       </Layout>
     </ConfigProvider>
