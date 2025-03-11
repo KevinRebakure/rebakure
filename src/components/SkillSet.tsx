@@ -9,7 +9,7 @@ const { Title } = Typography;
 
 function SkillSet() {
   return (
-    <Flex vertical style={{ width: "80%", margin: "0 auto" }} gap={10}>
+    <Flex vertical style={{ width: "70%", margin: "0 auto" }} gap={10}>
       <Title>My Skill Set</Title>
       <Flex>
         <Tabs tabPosition="left" items={array} />
