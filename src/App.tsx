@@ -2,6 +2,7 @@ import { ConfigProvider, Flex, Layout, theme, Typography } from "antd";
 import React from "react";
 import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
+import Bio from "./components/Bio";
 import Portals from "./components/Portals";
 import SkillSet from "./components/SkillSet";
 
@@ -55,6 +56,8 @@ export default function App() {
             </Title>
 
             <SkillSet />
+
+            <Bio />
           </Flex>
         </Content>
 
