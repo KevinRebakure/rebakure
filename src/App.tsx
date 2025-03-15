@@ -5,6 +5,7 @@ import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 import Bio from "./components/Bio";
 import Portals from "./components/Portals";
 import SkillSet from "./components/SkillSet";
+import FooterContent from "./components/Footer";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
@@ -61,7 +62,9 @@ export default function App() {
           </Flex>
         </Content>
 
-        <Footer>Footer</Footer>
+        <Footer>
+          <FooterContent />
+        </Footer>
       </Layout>
     </ConfigProvider>
   );
