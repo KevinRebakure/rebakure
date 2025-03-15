@@ -12,7 +12,16 @@ const { Title } = Typography;
 
 export default function App() {
   return (
-    <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+    <ConfigProvider
+      theme={{
+        algorithm: theme.darkAlgorithm,
+        components: {
+          Layout: {
+            headerBg: "#000",
+          },
+        },
+      }}
+    >
       <Layout style={{ minHeight: "100vh" }}>
         <Header
           style={{
@@ -29,7 +38,7 @@ export default function App() {
           </Flex>
         </Header>
 
-        <Content>
+        <Content style={{ marginBottom: 400 }}>
           <Flex vertical gap={100}>
             <Title
               style={{
