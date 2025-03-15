@@ -6,6 +6,7 @@ import GitHubIcon from "./GitHubIcon";
 import GmailIcon from "./GmailIcon";
 import InstagramIcon from "./InstagramIcon";
 import XIcon from "./XIcon";
+import SendIcon from "./SendIcon";
 
 export {
   BulbIcon,
@@ -16,4 +17,5 @@ export {
   GmailIcon,
   InstagramIcon,
   XIcon,
+  SendIcon,
 };
