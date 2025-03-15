@@ -24,7 +24,7 @@ function FooterContent() {
           </Flex>
         </Col>
 
-        <Col span={12}>
+        <Col span={12} style={{ border: "1px solid white" }}>
           <EmailMeForm />
         </Col>
       </Row>
