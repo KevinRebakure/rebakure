@@ -19,7 +19,7 @@ function Portals() {
       <Flex justify="center" gap={100}>
         {portals.map((portal) => (
           <Flex
-            id={portal.platform}
+            key={portal.platform}
             vertical
             align="center"
             gap="small"

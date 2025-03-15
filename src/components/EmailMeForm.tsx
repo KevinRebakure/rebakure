@@ -1,14 +1,18 @@
-import { Button, Form, Input, Space, Typography } from "antd";
+import { Button, Form, FormProps, Input, Space, Typography } from "antd";
 import SendIcon from "../assets/icons/SendIcon";
 const { Title } = Typography;
 
 function EmailMeForm() {
+  const [form] = Form.useForm();
   return (
     <Form
       name="Email me form"
       variant="underlined"
       requiredMark={false}
       labelCol={{ span: 3 }}
+      form={form}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
     >
       <Title level={2} style={{ textAlign: "center" }}>
         Stay In Touch
@@ -62,6 +66,14 @@ function EmailMeForm() {
     </Form>
   );
 }
+
+const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+  console.log("Success:", values);
+};
+
+const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
 
 interface FieldType {
   fullName?: string;
