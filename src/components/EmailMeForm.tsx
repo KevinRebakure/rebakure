@@ -1,4 +1,5 @@
-import { Form, Input, Typography } from "antd";
+import { Button, Form, Input, Space, Typography } from "antd";
+import SendIcon from "../assets/icons/SendIcon";
 const { Title } = Typography;
 
 function EmailMeForm() {
@@ -41,10 +42,22 @@ function EmailMeForm() {
         name="message"
         labelAlign="left"
         rules={[
-          { required: true, max: 50, message: "Please provide your message." },
+          { required: true, message: "Please provide your message." },
+          {
+            max: 40,
+            message: "The message is too long! Keep within 40 characters.",
+          },
         ]}
       >
         <Input style={{ backgroundColor: "transparent" }} />
+      </Form.Item>
+      <Form.Item label={null}>
+        <Button type="primary" htmlType="submit" style={{ padding: 10 }}>
+          <Space size="small" align="center">
+            <SendIcon style={{ fontSize: 20 }} />
+            Email Me
+          </Space>
+        </Button>
       </Form.Item>
     </Form>
   );
