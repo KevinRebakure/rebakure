@@ -2,6 +2,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Flex, Row, Space, Tag, Typography } from "antd";
 import { GitHubIcon, InstagramIcon, XIcon } from "../assets/icons";
+import EmailMeForm from "./EmailMeForm";
 
 const { Title, Text } = Typography;
 function FooterContent() {
@@ -21,6 +22,10 @@ function FooterContent() {
             <Text>My projects collection</Text>
             <Text>Contribute to my projects</Text>
           </Flex>
+        </Col>
+
+        <Col span={12}>
+          <EmailMeForm />
         </Col>
       </Row>
       <Row>
