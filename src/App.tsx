@@ -3,9 +3,9 @@ import React from "react";
 import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 import Bio from "./components/Bio";
+import FooterContent from "./components/Footer";
 import Portals from "./components/Portals";
 import SkillSet from "./components/SkillSet";
-import FooterContent from "./components/Footer";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
