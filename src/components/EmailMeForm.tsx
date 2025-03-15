@@ -40,7 +40,9 @@ function EmailMeForm() {
         label="Message"
         name="message"
         labelAlign="left"
-        rules={[{ required: true, message: "Please provide your message." }]}
+        rules={[
+          { required: true, max: 50, message: "Please provide your message." },
+        ]}
       >
         <Input style={{ backgroundColor: "transparent" }} />
       </Form.Item>
