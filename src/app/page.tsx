@@ -1,6 +1,8 @@
+"use client";
+
 import { ConfigProvider, Flex, Grid, Layout, theme, Typography } from "antd";
 import React from "react";
-import "./App.css";
+// import "./page.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 import Bio from "./components/Bio";
 import FooterContent from "./components/FooterContent";
@@ -11,7 +13,7 @@ const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
 const { useBreakpoint } = Grid;
 
-export default function App() {
+export default function Page() {
   const screens = useBreakpoint();
   return (
     <ConfigProvider
@@ -65,7 +67,7 @@ export default function App() {
                 fontWeight: "lighter",
               }}
             >
-              Let's Learn and Build Stuff Together
+              Let&apos;s Learn and Build Stuff Together
             </Title>
 
             <SkillSet />

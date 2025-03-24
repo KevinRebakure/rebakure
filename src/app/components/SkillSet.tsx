@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, Flex, Image, Tabs, Typography } from "antd";
 
 interface Item {
@@ -24,7 +26,7 @@ const Items = ({ placeholders }: { placeholders: Item[] }) => {
       {placeholders.map((item: Item) => (
         <Card key={item.title} style={{ padding: 0 }}>
           <Flex gap="middle" align="center">
-            <Image width={40} src={item.icon} />
+            <Image width={40} src={item.icon} alt="icon" />
             <Title level={5}>{item.title}</Title>
           </Flex>
         </Card>

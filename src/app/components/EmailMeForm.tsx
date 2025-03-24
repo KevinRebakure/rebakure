@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Form, FormProps, Input, Space, Typography } from "antd";
 import SendIcon from "../assets/icons/SendIcon";
 const { Title } = Typography;

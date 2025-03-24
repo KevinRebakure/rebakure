@@ -1,3 +1,5 @@
+"use client";
+
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Flex, Row, Space, Tag, Typography } from "antd";
@@ -13,7 +15,7 @@ function FooterContent() {
           <Flex vertical justify="space-between" style={{ height: "100%" }}>
             <Flex vertical>
               <Title level={3}>rebakure.com</Title>
-              <Text>Let's learn and build stuff together.</Text>
+              <Text>Let&apos;s learn and build stuff together.</Text>
             </Flex>
 
             <Flex vertical gap="large">

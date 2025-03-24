@@ -1,3 +1,5 @@
+"use client";
+
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, Flex, Typography } from "antd";
@@ -17,7 +19,7 @@ function Portals() {
       className="w-[90%] lg:w-[70%]"
     >
       <Title level={3} style={{ marginBottom: 30 }}>
-        Let's connect...
+        Let&apos;s connect...
       </Title>
       <Flex
         className="justify-between sm:justify-center"
