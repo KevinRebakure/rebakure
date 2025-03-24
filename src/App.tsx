@@ -43,6 +43,7 @@ export default function App() {
         <Content style={{ marginBottom: 400 }}>
           <Flex vertical gap={100}>
             <Title
+              className="text-2xl! sm:text-3xl! md:text-4xl!"
               style={{
                 textAlign: "center",
                 paddingTop: screens.sm ? 300 : 50,
