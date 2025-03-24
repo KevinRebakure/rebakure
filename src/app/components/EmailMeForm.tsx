@@ -17,7 +17,7 @@ function EmailMeForm() {
       onFinishFailed={onFinishFailed}
     >
       <Title level={2} style={{ textAlign: "center" }}>
-        Stay In Touch
+        Say hi👋
       </Title>
       <Form.Item<FieldType>
         label="Full names"
@@ -32,14 +32,6 @@ function EmailMeForm() {
         name="email"
         labelAlign="left"
         rules={[{ required: true, message: "Please provide your Email." }]}
-      >
-        <Input style={{ backgroundColor: "transparent" }} />
-      </Form.Item>
-      <Form.Item<FieldType>
-        label="Subject"
-        name="subject"
-        labelAlign="left"
-        rules={[{ required: true, message: "Please provide your subject." }]}
       >
         <Input style={{ backgroundColor: "transparent" }} />
       </Form.Item>
