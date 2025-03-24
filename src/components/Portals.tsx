@@ -14,7 +14,7 @@ function Portals() {
       style={{
         margin: "0 auto",
       }}
-      className="w-[90%] sm:w-[70%]"
+      className="w-[90%] lg:w-[70%]"
     >
       <Title level={3} style={{ marginBottom: 30 }}>
         Let's connect...
@@ -32,7 +32,7 @@ function Portals() {
             style={{ width: "max-content" }}
           >
             {portal.icon}{" "}
-            <Text className="hidden sm:block">{portal.username}</Text>
+            <Text className="hidden lg:block">{portal.username}</Text>
           </Flex>
         ))}
       </Flex>

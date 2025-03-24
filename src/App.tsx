@@ -49,7 +49,6 @@ export default function App() {
                 paddingTop: screens.sm ? 300 : 50,
                 paddingBottom: screens.sm ? 300 : 50,
                 fontWeight: "lighter",
-                border: "1px solid white",
               }}
             >
               Kevin Rebakure
@@ -58,11 +57,11 @@ export default function App() {
             <Portals />
 
             <Title
+              className="text-2xl! sm:text-3xl! md:text-4xl! lg:text-5xl! xl:text-6xl!"
               style={{
                 textAlign: "center",
                 paddingTop: 200,
                 paddingBottom: 200,
-                fontSize: 60,
                 fontWeight: "lighter",
               }}
             >
