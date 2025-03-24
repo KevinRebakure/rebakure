@@ -1,4 +1,4 @@
-import { ConfigProvider, Flex, Layout, theme, Typography } from "antd";
+import { ConfigProvider, Flex, Grid, Layout, theme, Typography } from "antd";
 import React from "react";
 import "./App.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
@@ -9,8 +9,10 @@ import SkillSet from "./components/SkillSet";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function App() {
+  const screens = useBreakpoint();
   return (
     <ConfigProvider
       theme={{
@@ -43,9 +45,10 @@ export default function App() {
             <Title
               style={{
                 textAlign: "center",
-                paddingTop: 300,
-                paddingBottom: 300,
+                paddingTop: screens.sm ? 300 : 50,
+                paddingBottom: screens.sm ? 300 : 50,
                 fontWeight: "lighter",
+                border: "1px solid white",
               }}
             >
               Kevin Rebakure
