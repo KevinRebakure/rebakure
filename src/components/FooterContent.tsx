@@ -31,7 +31,7 @@ function FooterContent() {
           </Flex>
         </Col>
         <Col span={6}>
-          <Flex vertical gap={150}>
+          <Flex vertical gap={100}>
             <Flex vertical gap="middle">
               <Title level={4}>My Portfolio</Title>
               <Text>My projects collection</Text>

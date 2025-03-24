@@ -7,7 +7,7 @@ function Bio() {
     <Flex
       vertical
       gap="middle"
-      style={{ width: "70%", margin: "0 auto", whiteSpace: "pre-line" }}
+      style={{ width: "50%", marginLeft: 200, whiteSpace: "pre-line" }}
     >
       <Title level={3}>How we got here...</Title>
       <Text>{bio}</Text>
