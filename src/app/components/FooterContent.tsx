@@ -1,5 +1,3 @@
-"use client";
-
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Flex, Row, Space, Tag, Typography } from "antd";
