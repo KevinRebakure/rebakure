@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, Flex, Image, Tabs, Typography } from "antd";
 
 interface Item {

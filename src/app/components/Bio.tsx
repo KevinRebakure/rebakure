@@ -1,5 +1,3 @@
-"use client";
-
 import { Flex, Typography } from "antd";
 
 const { Title, Text } = Typography;
