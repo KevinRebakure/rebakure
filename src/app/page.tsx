@@ -2,12 +2,13 @@
 
 import { ConfigProvider, Flex, Grid, Layout, theme, Typography } from "antd";
 import React from "react";
-// import "./page.css";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
 import Bio from "./components/Bio";
 import FooterContent from "./components/FooterContent";
 import Portals from "./components/Portals";
 import SkillSet from "./components/SkillSet";
+// This is for fixing some compatibility issues
+import "@ant-design/v5-patch-for-react-19";
 
 const { Content, Footer, Header } = Layout;
 const { Title } = Typography;
