@@ -1,10 +1,10 @@
+import { SendOutlined } from "@ant-design/icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Alert, Button, Col, Flex, Row, Space, Tag, Typography } from "antd";
 import copy from "copy-to-clipboard";
-import { GitHubIcon, InstagramIcon, SendIcon, XIcon } from "../assets/icons";
 import { useState } from "react";
-import { SendOutlined } from "@ant-design/icons";
+import { GitHubIcon, InstagramIcon, XIcon } from "../assets/icons";
 
 const { Title, Text } = Typography;
 function FooterContent() {
