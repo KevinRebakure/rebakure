@@ -1,20 +1,12 @@
 import { Button, Form, FormProps, Input, Space, Typography } from "antd";
 import SendIcon from "../assets/icons/SendIcon";
-import renderEmail from "../utils/RenderEmail";
 const { Title } = Typography;
 
 function EmailMeForm() {
   const [form] = Form.useForm<FieldType>();
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values: FieldType) => {
-    if (values) {
-      renderEmail({
-        names: values.fullName!,
-        message: values.message!,
-      }).then((message) => console.log(message));
-
-      // console.log("Success:", values);
-    }
+    console.log("Success:", values);
   };
 
   const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
