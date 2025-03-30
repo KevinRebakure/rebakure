@@ -35,6 +35,11 @@ function FooterContent() {
                   message="Copied email to the clipboard!"
                   type="success"
                   showIcon
+                  style={{
+                    maxWidth: "max-content",
+                    position: "absolute",
+                    bottom: 120,
+                  }}
                 />
               )}
             </Flex>

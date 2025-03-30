@@ -70,7 +70,12 @@ function Portals() {
           message="Copied email to the clipboard!"
           type="success"
           showIcon
-          style={{ marginTop: 10, maxWidth: "max-content" }}
+          style={{
+            marginTop: 10,
+            maxWidth: "max-content",
+            position: "absolute",
+            right: 0,
+          }}
         />
       )}
     </Card>
