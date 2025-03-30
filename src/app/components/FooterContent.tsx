@@ -4,6 +4,7 @@ import { Alert, Button, Col, Flex, Row, Space, Tag, Typography } from "antd";
 import copy from "copy-to-clipboard";
 import { GitHubIcon, InstagramIcon, SendIcon, XIcon } from "../assets/icons";
 import { useState } from "react";
+import { SendOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 function FooterContent() {
@@ -27,7 +28,7 @@ function FooterContent() {
                   }, 1000);
                 }}
               >
-                <SendIcon />
+                <SendOutlined />
                 Send me an Email
               </Button>
               {showEmailCopiedAlert && (
