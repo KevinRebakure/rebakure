@@ -22,6 +22,7 @@ function EmailMeForm() {
   ) => {
     console.log("Failed:", errorInfo);
   };
+
   return (
     <Form
       name="Email me form"
