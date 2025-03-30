@@ -1,16 +1,18 @@
-"use client";
-
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, Flex, Typography } from "antd";
+import { Alert, Card, Flex, Grid, Typography } from "antd";
+import copy from "copy-to-clipboard";
+import { useState } from "react";
 import { GitHubIcon, GmailIcon, InstagramIcon, XIcon } from "../assets/icons";
-import { Grid } from "antd";
 
 const { Text, Title } = Typography;
 const { useBreakpoint } = Grid;
 
 function Portals() {
   const screens = useBreakpoint();
+
+  const [showEmailCopiedAlert, setShowEmailCopiedAlert] = useState(false);
+
   return (
     <Card
       style={{
@@ -33,11 +35,49 @@ function Portals() {
             gap="small"
             style={{ width: "max-content" }}
           >
-            {portal.icon}{" "}
-            <Text className="hidden lg:block">{portal.username}</Text>
+            {portal.platform === "gmail" ? (
+              <>
+                <button
+                  style={{
+                    display: "flex",
+                    gap: 8,
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                  onClick={() => {
+                    copy("kevinrebakure@gmail.com");
+                    setShowEmailCopiedAlert(true);
+                    setTimeout(() => {
+                      setShowEmailCopiedAlert(false);
+                    }, 1000);
+                  }}
+                >
+                  {portal.icon}{" "}
+                  <Text className="hidden lg:block">{portal.username}</Text>
+                </button>
+              </>
+            ) : (
+              <>
+                {portal.icon}{" "}
+                <Text className="hidden lg:block">{portal.username}</Text>
+              </>
+            )}
           </Flex>
         ))}
       </Flex>
+      {showEmailCopiedAlert && (
+        <Alert
+          message="Copied email to the clipboard!"
+          type="success"
+          showIcon
+          style={{
+            marginTop: 10,
+            maxWidth: "max-content",
+            position: "absolute",
+            right: 0,
+          }}
+        />
+      )}
     </Card>
   );
 }
