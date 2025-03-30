@@ -1,10 +1,14 @@
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Col, Flex, Row, Space, Tag, Typography } from "antd";
+import { Alert, Button, Col, Flex, Row, Space, Tag, Typography } from "antd";
+import copy from "copy-to-clipboard";
 import { GitHubIcon, InstagramIcon, SendIcon, XIcon } from "../assets/icons";
+import { useState } from "react";
 
 const { Title, Text } = Typography;
 function FooterContent() {
+  const [showEmailCopiedAlert, setShowEmailCopiedAlert] = useState(false);
+
   return (
     <>
       <Row>
@@ -13,10 +17,26 @@ function FooterContent() {
             <Flex vertical gap="middle">
               <Title level={3}>rebakure.com</Title>
               <Text>Let&apos;s learn and build stuff together.</Text>
-              <Button style={{ width: 150 }}>
+              <Button
+                style={{ width: 150 }}
+                onClick={() => {
+                  copy("kevinrebakure@gmail.com");
+                  setShowEmailCopiedAlert(true);
+                  setTimeout(() => {
+                    setShowEmailCopiedAlert(false);
+                  }, 1000);
+                }}
+              >
                 <SendIcon />
                 Send me an Email
               </Button>
+              {showEmailCopiedAlert && (
+                <Alert
+                  message="Copied email to the clipboard!"
+                  type="success"
+                  showIcon
+                />
+              )}
             </Flex>
 
             <Flex vertical gap="middle">
