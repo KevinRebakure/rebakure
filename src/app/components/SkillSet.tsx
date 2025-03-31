@@ -5,7 +5,7 @@ interface Item {
   icon: string;
 }
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const { useBreakpoint } = Grid;
 
@@ -24,23 +24,30 @@ export default function SkillSet() {
       <Title>My Skill Set</Title>
 
       {screens.xs && <Tabs tabPosition="top" items={array} />}
-      {screens.md && <Tabs tabPosition="left" items={array} />}
+      {screens.sm && <Tabs tabPosition="left" items={array} />}
     </Flex>
   );
 }
 
 const Items = ({ placeholders }: { placeholders: Item[] }) => {
   return (
-    <Flex gap="middle" wrap>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
       {placeholders.map((item: Item) => (
-        <Card key={item.title} style={{ padding: 0 }}>
+        <Card
+          key={item.title}
+          style={{
+            padding: 0,
+          }}
+        >
           <Flex gap="middle" align="center">
             <Image width={40} src={item.icon} alt="icon" />
-            <Title level={5}>{item.title}</Title>
+            <Text className="text-[clamp(12px,4vw,18px)] whitespace-nowrap overflow-hidden truncate m-0">
+              {item.title}
+            </Text>
           </Flex>
         </Card>
       ))}
-    </Flex>
+    </div>
   );
 };
 
