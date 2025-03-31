@@ -72,7 +72,7 @@ function Portals() {
           showIcon
           style={{
             marginTop: 10,
-            maxWidth: "max-content",
+            width: "max-content",
             position: "absolute",
             right: 0,
           }}
