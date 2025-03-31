@@ -1,4 +1,4 @@
-import { Card, Flex, Image, Tabs, Typography } from "antd";
+import { Card, Flex, Grid, Image, Tabs, Typography } from "antd";
 
 interface Item {
   title: string;
@@ -7,13 +7,24 @@ interface Item {
 
 const { Title } = Typography;
 
-function SkillSet() {
+const { useBreakpoint } = Grid;
+
+export default function SkillSet() {
+  const screens = useBreakpoint();
+
   return (
-    <Flex vertical style={{ width: "70%", margin: "0 auto" }} gap={10}>
+    <Flex
+      vertical
+      style={{
+        width: screens.xs ? "90%" : "70%",
+        margin: "0 auto",
+      }}
+      gap={10}
+    >
       <Title>My Skill Set</Title>
-      <Flex>
-        <Tabs tabPosition="left" items={array} />
-      </Flex>
+
+      {screens.xs && <Tabs tabPosition="top" items={array} />}
+      {screens.md && <Tabs tabPosition="left" items={array} />}
     </Flex>
   );
 }
@@ -163,5 +174,3 @@ const array = [
     children: <Items placeholders={tools} />,
   },
 ];
-
-export default SkillSet;
