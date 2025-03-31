@@ -1,15 +1,8 @@
 "use client";
 
 import { ConfigProvider, Flex, Layout, theme } from "antd";
-import React from "react";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
-import Bio from "./components/Bio";
-import FooterContent from "./components/FooterContent";
-import Motto from "./components/Motto";
-import Portals from "./components/Portals";
-import SkillSet from "./components/SkillSet";
-import UserName from "./components/UserName";
-
+import { FooterContent, Motto, Portals, SkillSet, Welcome } from "./components";
 // This is for fixing some compatibility issues
 import "@ant-design/v5-patch-for-react-19";
 
@@ -43,18 +36,14 @@ export default function Page() {
           </Flex>
         </Header>
 
-        <Content style={{ marginBottom: 400 }}>
-          <Flex vertical gap={100}>
-            <UserName />
+        <Content style={{ marginBottom: 100 }}>
+          <Welcome />
 
-            <Portals />
+          <Portals />
 
-            <Motto />
+          <Motto />
 
-            <SkillSet />
-
-            <Bio />
-          </Flex>
+          <SkillSet />
         </Content>
 
         <Footer>
