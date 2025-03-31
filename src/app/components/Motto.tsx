@@ -10,7 +10,6 @@ function Motto() {
         paddingTop: 200,
         paddingBottom: 200,
         fontWeight: "lighter",
-        border: "1px solid white",
       }}
     >
       Let&apos;s Learn and Build Stuff Together
