@@ -1,11 +1,10 @@
-import { Card, Flex, Grid, Image, Tabs, Typography } from "antd";
+import { Card, Flex, Grid, Image, Tabs } from "antd";
+import { Text, Title } from "../shared/typography";
 
 interface Item {
   title: string;
   icon: string;
 }
-
-const { Title, Text } = Typography;
 
 const { useBreakpoint } = Grid;
 

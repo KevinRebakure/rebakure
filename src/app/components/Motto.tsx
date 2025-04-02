@@ -1,6 +1,4 @@
-import { Typography } from "antd";
-
-const { Title } = Typography;
+import { Title } from "../shared/typography";
 
 function Motto() {
   return (

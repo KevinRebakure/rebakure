@@ -4,8 +4,9 @@ import { Alert, Card, Flex, Grid, Typography } from "antd";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
 import { GitHubIcon, GmailIcon, InstagramIcon, XIcon } from "../assets/icons";
+import { H3 } from "../shared/typography";
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 const { useBreakpoint } = Grid;
 
 function Portals() {
@@ -20,9 +21,9 @@ function Portals() {
       }}
       className="w-[90%] lg:w-[70%]"
     >
-      <Title level={3} style={{ marginBottom: 30 }}>
+      <H3 style={{ marginBottom: 30 }}>
         Let&apos;s connect...
-      </Title>
+      </H3>
       <Flex
         className="justify-between sm:justify-center"
         gap={screens.md ? 100 : "large"}
