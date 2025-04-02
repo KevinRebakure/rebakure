@@ -1,21 +1,14 @@
 "use client";
 
-import { ConfigProvider, Flex, Grid, Layout, theme, Typography } from "antd";
-import React from "react";
+import { ConfigProvider, Flex, Layout, theme } from "antd";
 import { BulbIcon, FolderIcon, RocketIcon, UserIcon } from "./assets/icons";
-import Bio from "./components/Bio";
-import FooterContent from "./components/FooterContent";
-import Portals from "./components/Portals";
-import SkillSet from "./components/SkillSet";
+import { FooterContent, Motto, Portals, SkillSet, Welcome } from "./components";
 // This is for fixing some compatibility issues
 import "@ant-design/v5-patch-for-react-19";
 
 const { Content, Footer, Header } = Layout;
-const { Title } = Typography;
-const { useBreakpoint } = Grid;
 
 export default function Page() {
-  const screens = useBreakpoint();
   return (
     <ConfigProvider
       theme={{
@@ -43,38 +36,14 @@ export default function Page() {
           </Flex>
         </Header>
 
-        <Content style={{ marginBottom: 400 }}>
-          <Flex vertical gap={100}>
-            <Title
-              className="text-2xl! sm:text-3xl! md:text-4xl!"
-              style={{
-                textAlign: "center",
-                paddingTop: screens.sm ? 300 : 50,
-                paddingBottom: screens.sm ? 300 : 50,
-                fontWeight: "lighter",
-              }}
-            >
-              Kevin Rebakure
-            </Title>
+        <Content style={{ marginBottom: 100 }}>
+          <Welcome />
 
-            <Portals />
+          <Portals />
 
-            <Title
-              className="text-2xl! sm:text-3xl! md:text-4xl! lg:text-5xl! xl:text-6xl!"
-              style={{
-                textAlign: "center",
-                paddingTop: 200,
-                paddingBottom: 200,
-                fontWeight: "lighter",
-              }}
-            >
-              Let&apos;s Learn and Build Stuff Together
-            </Title>
+          <Motto />
 
-            <SkillSet />
-
-            <Bio />
-          </Flex>
+          <SkillSet />
         </Content>
 
         <Footer>

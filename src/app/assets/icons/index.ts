@@ -1,21 +1,21 @@
-import BulbIcon from "./BulbIcon";
-import FolderIcon from "./FolderIcon";
-import RocketIcon from "./RocketIcon";
-import UserIcon from "./UserIcon";
-import GitHubIcon from "./GitHubIcon";
-import GmailIcon from "./GmailIcon";
-import InstagramIcon from "./InstagramIcon";
-import XIcon from "./XIcon";
-import SendIcon from "./SendIcon";
+import GitHubIcon from "./brand-icons/GitHubIcon";
+import GmailIcon from "./brand-icons/GmailIcon";
+import InstagramIcon from "./brand-icons/InstagramIcon";
+import XIcon from "./brand-icons/XIcon";
+import BulbIcon from "./interface-icons/BulbIcon";
+import FolderIcon from "./interface-icons/FolderIcon";
+import RocketIcon from "./interface-icons/RocketIcon";
+import SendIcon from "./interface-icons/SendIcon";
+import UserIcon from "./interface-icons/UserIcon";
 
 export {
   BulbIcon,
   FolderIcon,
-  RocketIcon,
-  UserIcon,
   GitHubIcon,
   GmailIcon,
   InstagramIcon,
-  XIcon,
+  RocketIcon,
   SendIcon,
+  UserIcon,
+  XIcon,
 };

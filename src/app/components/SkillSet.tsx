@@ -1,35 +1,52 @@
-import { Card, Flex, Image, Tabs, Typography } from "antd";
+import { Card, Flex, Grid, Image, Tabs } from "antd";
+import { Text, Title } from "../shared/typography";
 
 interface Item {
   title: string;
   icon: string;
 }
 
-const { Title } = Typography;
+const { useBreakpoint } = Grid;
 
-function SkillSet() {
+export default function SkillSet() {
+  const screens = useBreakpoint();
+
   return (
-    <Flex vertical style={{ width: "70%", margin: "0 auto" }} gap={10}>
+    <Flex
+      vertical
+      style={{
+        width: screens.xs ? "90%" : "70%",
+        margin: "0 auto",
+      }}
+      gap={10}
+    >
       <Title>My Skill Set</Title>
-      <Flex>
-        <Tabs tabPosition="left" items={array} />
-      </Flex>
+
+      {screens.xs && <Tabs tabPosition="top" items={array} />}
+      {screens.sm && <Tabs tabPosition="left" items={array} />}
     </Flex>
   );
 }
 
 const Items = ({ placeholders }: { placeholders: Item[] }) => {
   return (
-    <Flex gap="middle" wrap>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
       {placeholders.map((item: Item) => (
-        <Card key={item.title} style={{ padding: 0 }}>
+        <Card
+          key={item.title}
+          style={{
+            padding: 0,
+          }}
+        >
           <Flex gap="middle" align="center">
             <Image width={40} src={item.icon} alt="icon" />
-            <Title level={5}>{item.title}</Title>
+            <Text className="text-[clamp(12px,4vw,18px)] whitespace-nowrap overflow-hidden truncate m-0">
+              {item.title}
+            </Text>
           </Flex>
         </Card>
       ))}
-    </Flex>
+    </div>
   );
 };
 
@@ -163,5 +180,3 @@ const array = [
     children: <Items placeholders={tools} />,
   },
 ];
-
-export default SkillSet;
