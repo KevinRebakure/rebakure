@@ -1,14 +1,16 @@
 import { Grid, Typography } from "antd";
+import React from "react";
 
 const { Text: AntText } = Typography;
 const { useBreakpoint } = Grid;
 
-type Props = {
+type TextProps = React.ComponentProps<typeof AntText>;
+
+type Props = TextProps & {
   children: string;
-  style?: React.CSSProperties;
 };
 
-export default function Text({ children, style }: Props) {
+export default function Text({ children, ...restProps }: Props) {
   const screens = useBreakpoint();
 
   const breakpoint = screens.xxl
@@ -32,8 +34,13 @@ export default function Text({ children, style }: Props) {
     xxl: "1rem",
   };
 
+  const { style, ...otherProps } = restProps;
+  const baseFontSize: React.CSSProperties = { fontSize: fontSizes[breakpoint] };
+
+  const styles = { ...baseFontSize, ...(style || {}) };
+
   return (
-    <AntText style={{ ...style, fontSize: fontSizes[breakpoint] }}>
+    <AntText {...otherProps} style={styles}>
       {children}
     </AntText>
   );

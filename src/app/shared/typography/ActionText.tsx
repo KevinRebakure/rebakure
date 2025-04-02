@@ -3,12 +3,13 @@ import { Grid, Typography } from "antd";
 const { Text: AntText } = Typography;
 const { useBreakpoint } = Grid;
 
-type Props = {
+type TextProps = React.ComponentProps<typeof AntText>;
+
+type Props = TextProps & {
   children: string;
-  style?: React.CSSProperties;
 };
 
-export default function ActionText({ children, style }: Props) {
+export default function ActionText({ children, ...restProps }: Props) {
   const screens = useBreakpoint();
 
   const breakpoint = screens.xxl
@@ -32,8 +33,13 @@ export default function ActionText({ children, style }: Props) {
     xxl: "1rem",
   };
 
+  const { style, ...otherProps } = restProps;
+  const baseFontSize: React.CSSProperties = { fontSize: fontSizes[breakpoint] };
+
+  const styles = { ...baseFontSize, ...(style || {}) };
+
   return (
-    <AntText style={{ ...style, fontSize: fontSizes[breakpoint] }}>
+    <AntText {...otherProps} style={styles}>
       {children}
     </AntText>
   );

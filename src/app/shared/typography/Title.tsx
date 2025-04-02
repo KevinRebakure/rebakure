@@ -3,12 +3,13 @@ import { Grid, Typography } from "antd";
 const { Title: AntTitle } = Typography;
 const { useBreakpoint } = Grid;
 
-type Props = {
+type TextProps = React.ComponentProps<typeof AntTitle>;
+
+type Props = TextProps & {
   children: string;
-  style?: React.CSSProperties;
 };
 
-export default function Title({ children, style }: Props) {
+export default function Title({ children, ...restProps }: Props) {
   const screens = useBreakpoint();
 
   const breakpoint = screens.xxl
@@ -32,8 +33,13 @@ export default function Title({ children, style }: Props) {
     xxl: "3.815rem",
   };
 
+  const { style, ...otherProps } = restProps;
+  const baseFontSize: React.CSSProperties = { fontSize: fontSizes[breakpoint] };
+
+  const styles = { ...baseFontSize, ...(style || {}) };
+
   return (
-    <AntTitle style={{ ...style, fontSize: fontSizes[breakpoint] }}>
+    <AntTitle {...otherProps} style={styles}>
       {children}
     </AntTitle>
   );
