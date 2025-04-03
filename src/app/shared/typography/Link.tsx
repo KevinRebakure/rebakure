@@ -1,5 +1,6 @@
 import { Grid, Typography } from "antd";
 import { ReactNode } from "react";
+import styled from "styled-components";
 
 const { Link: AntLink } = Typography;
 const { useBreakpoint } = Grid;
@@ -9,6 +10,13 @@ type LinkProps = React.ComponentProps<typeof AntLink>;
 type Props = LinkProps & {
   children: ReactNode;
 };
+
+const StyledAntLink = styled(AntLink)`
+  transition: color 0.3s ease;
+  &:hover {
+    color: #1890ff !important;
+  }
+`;
 
 export default function Link({ children, ...restProps }: Props) {
   const screens = useBreakpoint();
@@ -40,8 +48,8 @@ export default function Link({ children, ...restProps }: Props) {
   const styles = { ...baseFontSize, ...(style || {}) };
 
   return (
-    <AntLink {...otherProps} style={styles}>
+    <StyledAntLink {...otherProps} style={styles}>
       {children}
-    </AntLink>
+    </StyledAntLink>
   );
 }
