@@ -92,7 +92,7 @@ function FooterContent() {
 
       <Row justify="center">
         <Col span={8}>
-          <Text underline>&copy;2025 rebakure.com</Text>
+          <Text>&copy;2025 rebakure.com</Text>
         </Col>
         <Col span={8}>
           <Link
