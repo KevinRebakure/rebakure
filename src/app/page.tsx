@@ -1,5 +1,6 @@
 "use client";
 
+import "@ant-design/v5-patch-for-react-19";
 import { ConfigProvider, Layout, theme } from "antd";
 import {
   FooterContent,
@@ -9,7 +10,6 @@ import {
   SkillSet,
   Welcome,
 } from "./components";
-import "@ant-design/v5-patch-for-react-19";
 
 const { Content, Footer, Header } = Layout;
 
