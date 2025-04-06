@@ -11,6 +11,7 @@ const StyledIcon = styled(Icon)`
   transition: color 0.3s ease;
   color: white;
   font-size: 32px;
+  cursor: pointer;
 
   &:hover {
     color: #1890ff;
