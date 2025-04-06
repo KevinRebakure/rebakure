@@ -4,8 +4,9 @@ import { Alert, Card, Flex, Grid, Typography } from "antd";
 import copy from "copy-to-clipboard";
 import { ReactElement, useState } from "react";
 import { GitHubIcon, GmailIcon, InstagramIcon, XIcon } from "../assets/icons";
-import { H3, Link } from "../shared/typography";
+import { H3 } from "../shared/typography";
 import styled from "styled-components";
+import { Link } from "../shared/utils";
 
 interface Portal {
   username: string;
