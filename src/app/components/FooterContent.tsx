@@ -77,9 +77,10 @@ function FooterContent() {
                   <H4>{group.groupHeading}</H4>
                   {group.links.map((link) => (
                     <Space key={link.displayText}>
-                      <Link href={link.url} style={{ color: "white" }}>
+                      {/* <Link href={link.url} style={{ color: "white" }}>
                         {link.displayText}
-                      </Link>
+                      </Link> */}
+                      <Text>{link.displayText}</Text>
                       {!link.done && <Tag color="green">Upcoming</Tag>}
                     </Space>
                   ))}
