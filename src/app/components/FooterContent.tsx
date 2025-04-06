@@ -6,7 +6,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Alert, Button, Flex, Space, Tag } from "antd";
+import { Alert, Button, Tag } from "antd";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
 import { H3, H4, Text } from "../shared/typography";
@@ -74,15 +74,15 @@ function FooterContent() {
 
       {linksGroup.map((group) => (
         <div key={group.groupHeading} className="hidden sm:block">
-          <Flex vertical gap="middle">
+          <div className="flex flex-col gap-2">
             <H4>{group.groupHeading}</H4>
             {group.links.map((link) => (
-              <Space key={link.displayText}>
+              <div className="flex items-center gap-1" key={link.displayText}>
                 <Text>{link.displayText}</Text>
                 {!link.done && <Tag color="green">Upcoming</Tag>}
-              </Space>
+              </div>
             ))}
-          </Flex>
+          </div>
         </div>
       ))}
     </div>
