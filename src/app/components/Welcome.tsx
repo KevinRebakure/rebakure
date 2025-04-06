@@ -12,7 +12,7 @@ export default function Welcome() {
       >
         Kevin Rebakure
       </H1>
-      <Text style={{ textAlign: "center", fontSize: 24, fontWeight: 50 }}>
+      <Text style={{ textAlign: "center", fontWeight: 50, fontSize: 20 }}>
         Welcome to my Learning Journal :)
       </Text>
     </Flex>
