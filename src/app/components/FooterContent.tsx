@@ -16,7 +16,7 @@ function FooterContent() {
   const [showEmailCopiedAlert, setShowEmailCopiedAlert] = useState(false);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3">
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col justify-between gap-4">
         <div className="flex flex-col gap-2">
           <H3>rebakure.com</H3>
           <Text>Let&apos;s learn and build stuff together.</Text>
