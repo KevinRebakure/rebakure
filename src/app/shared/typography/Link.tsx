@@ -16,6 +16,10 @@ const StyledAntLink = styled(AntLink)`
   &:hover {
     color: #1890ff !important;
   }
+
+  span {
+    color: inherit;
+  }
 `;
 
 export default function Link({ children, ...restProps }: Props) {

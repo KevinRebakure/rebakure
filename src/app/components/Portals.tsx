@@ -5,6 +5,7 @@ import copy from "copy-to-clipboard";
 import { ReactElement, useState } from "react";
 import { GitHubIcon, GmailIcon, InstagramIcon, XIcon } from "../assets/icons";
 import { H3, Link } from "../shared/typography";
+import styled from "styled-components";
 
 interface Portal {
   username: string;
@@ -42,13 +43,7 @@ function Portals() {
             style={{ width: "max-content" }}
           >
             {portal.platform === "gmail" ? (
-              <button
-                style={{
-                  display: "flex",
-                  gap: 8,
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
+              <StyledButton
                 onClick={() => {
                   copy("kevinrebakure@gmail.com");
                   setShowEmailCopiedAlert(true);
@@ -59,7 +54,7 @@ function Portals() {
               >
                 {portal.icon}{" "}
                 <Text className="hidden lg:block">{portal.username}</Text>
-              </button>
+              </StyledButton>
             ) : (
               <Link
                 href={portal.url!}
@@ -72,10 +67,8 @@ function Portals() {
                   color: "white",
                 }}
               >
-                <>
-                  {portal.icon}{" "}
-                  <Text className="hidden lg:block">{portal.username}</Text>
-                </>
+                {portal.icon}{" "}
+                <Text className="hidden lg:block">{portal.username}</Text>
               </Link>
             )}
           </Flex>
@@ -97,6 +90,26 @@ function Portals() {
     </Card>
   );
 }
+
+const StyledButton = styled.button`
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1890ff;
+  }
+
+  span {
+    color: inherit;
+  }
+`;
 
 const portals: Portal[] = [
   {
